@@ -1,2 +1,35 @@
 :root {
+    --color-text: #ffefee;
+    --color-border: #fefeee;
+    --color-background: #000000;
+    --color-buttons: #0f0f0f;
+}
+
+.difficulties
+{
+    display: flexbox;
+}
+
+.sudoku-board
+{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    max-width: 600px;
+    border: 5px solid var(--color-border);
+    background-color: var(--color-background);
+}
+
+.small-boxes
+{
+    border: 1px solid var(--color-border);
+}
+
+.medium-boxes
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    border: 3px solid var(--color-border);
+    background-color: #0000f0;
 }
