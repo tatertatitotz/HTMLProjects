@@ -33,3 +33,9 @@
     border: 3px solid var(--color-border);
     background-color: #0000f0;
 }
+
+.button
+{
+    background-color: #FFFFFF;
+    text-emphasis-color: var(--color-buttons);
+}

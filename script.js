@@ -1,5 +1,4 @@
 function loadGrid() {
-  console.log("Poo");
   for (let i = 0; i < 9; i++) {
     /* */
     $("#board").append($("<div>", { class: "medium-boxes", id: `med-${i}`}));
@@ -14,6 +13,20 @@ function loadGrid() {
   }
 }
 
+function fillGrid() {
+  console.log("Poo");
+  for (let id = 0; id < 81; id++)
+  {
+    const button = document.getElementById(`btn-${id}`)
+    button.textContent = random();
+  }
+}
+
+function random(){
+   return parseInt(Math.random()*10) ;
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   loadGrid();
+  fillGrid();
 });
