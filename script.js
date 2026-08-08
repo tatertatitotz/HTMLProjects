@@ -24,6 +24,7 @@ function fillGrid() {
   //checkEqual();
 }
 
+//remove later? 
 function random() {
   let number =  parseInt(Math.random() * 10);
   while (number == 0)
@@ -44,6 +45,7 @@ function shuffle(id){
   return numbers[id];
 }
 
+//remove later
 function checkEqual() {
   for(let check = 0; check < 81; check++){
     for (let id = 0; id < 81; id++) {
