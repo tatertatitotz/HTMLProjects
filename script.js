@@ -19,10 +19,24 @@ function fillGrid() {
       const button = document.getElementById(`btn-${id}`)
       button.textContent = random();
   }
+  checkEqual();
 }
 
 function random() {
   return parseInt(Math.random() * 10);
+}
+
+function checkEqual() {
+  for (let id = 0; id < 9; id++) {
+      const text = document.getElementById(`btn-${id}`).innerText;
+      const id2 = id + 1;
+      const text2 = document.getElementById(`btn-${id2}`).innerText;
+      while(text == text2)
+      {
+        document.getElementById(`btn-${id2}`).textContent = random();
+      }
+      console.log(text);
+  }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
