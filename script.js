@@ -25,11 +25,11 @@ function fillGrid() {
 }
 
 function random() {
-  const number =  parseInt(Math.random() * 10 + 1);
-  if (number == 0)
+  let number =  parseInt(Math.random() * 10);
+  while (number == 0)
   {
-    //might parseInt(Math.random() * 10 + 1); its own method.
-    number = parseInt(Math.random() * 10 + 1);;
+    //might parseInt(Math.random() * 10); its own method.
+    number = parseInt(Math.random() * 10);
   }
   return number;
 }
