@@ -19,7 +19,7 @@ function fillGrid() {
   console.log("Poo");
     for (let id = 0; id < 81; id++) {
       const button = document.getElementById(`btn-${id}`);
-      button.textContent = shuffle();
+      button.textContent = shuffle(id);
   }
   //checkEqual();
 }
@@ -34,9 +34,36 @@ function random() {
   return number;
 }
   
-function shuffle(){
-  const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-  return numbers[parseInt(Math.random() * 9)]
+function shuffle(id){
+  let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  // let randomIndex = parseInt(Math.random() * 9);
+  // let randomNumbers = numbers[randomIndex];
+  // let store = numbers[0];
+  // numbers[0] = randomNumbers;
+  // numbers[randomIndex] = store;
+  switch (id) 
+  {
+    case 0:
+      return numbers[0];
+    case 1:
+      return numbers[1];
+    case 2:
+      return numbers[2];
+    case 3:
+      return numbers[3];
+    case 4:
+      return numbers[4];
+    case 5:
+      return numbers[5];
+    case 6:
+      return numbers[6];
+    case 7:
+      return numbers[7];
+    case 8:
+      return numbers[8];
+    default:
+      return 0;
+  }
 }
 
 function checkEqual() {
