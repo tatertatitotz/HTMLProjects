@@ -25,19 +25,35 @@ function fillGrid() {
 }
 
 function random() {
-  return parseInt(Math.random() * 10);
+  const number =  parseInt(Math.random() * 10 + 1);
+  if (number == 0)
+  {
+    //might parseInt(Math.random() * 10 + 1); its own method.
+    number = parseInt(Math.random() * 10 + 1);;
+  }
+  return number;
 }
+  
 
 function checkEqual() {
-  for (let id = 0; id < 9; id++) {
-      const text = document.getElementById(`btn-${id}`).innerText;
-      const id2 = id + 1;
-      const text2 = document.getElementById(`btn-${id2}`).innerText;
-      while(text == text2)
-      {
-        document.getElementById(`btn-${id2}`).textContent = random();
+  for(let check = 0; check < 9; check++){
+    for (let id = 0; id < 9; id++) {
+        const text = document.getElementById(`btn-${id}`).innerText;
+        parseInt(text, 10);
+        const id2 = id + 1;
+        if(id2 == 9)
+        {
+          return;
+        }
+        const text2 = document.getElementById(`btn-${id2}`).innerText;
+        parseInt(text2, 10);
+        while(text == text2)
+        {
+          document.getElementById(`btn-${id2}`).textContent = random();
+          text2 = document.getElementById(`btn-${id2}`).textContent;
+        }
+        console.log(text);
       }
-      console.log(text);
   }
 }
 
