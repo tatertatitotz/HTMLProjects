@@ -19,9 +19,9 @@ function fillGrid() {
   console.log("Poo");
     for (let id = 0; id < 81; id++) {
       const button = document.getElementById(`btn-${id}`);
-      button.textContent = random();
+      button.textContent = shuffle();
   }
-  checkEqual();
+  //checkEqual();
 }
 
 function random() {
@@ -34,10 +34,14 @@ function random() {
   return number;
 }
   
+function shuffle(){
+  const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  return numbers[parseInt(Math.random() * 9)]
+}
 
 function checkEqual() {
-  for(let check = 0; check < 9; check++){
-    for (let id = 0; id < 9; id++) {
+  for(let check = 0; check < 81; check++){
+    for (let id = 0; id < 81; id++) {
         const text = document.getElementById(`btn-${id}`).innerText;
         parseInt(text, 10);
         const id2 = id + 1;
