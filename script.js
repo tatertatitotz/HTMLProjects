@@ -41,29 +41,7 @@ function shuffle(id){
   // let store = numbers[0];
   // numbers[0] = randomNumbers;
   // numbers[randomIndex] = store;
-  switch (id) 
-  {
-    case 0:
-      return numbers[0];
-    case 1:
-      return numbers[1];
-    case 2:
-      return numbers[2];
-    case 3:
-      return numbers[3];
-    case 4:
-      return numbers[4];
-    case 5:
-      return numbers[5];
-    case 6:
-      return numbers[6];
-    case 7:
-      return numbers[7];
-    case 8:
-      return numbers[8];
-    default:
-      return 0;
-  }
+  return numbers[id];
 }
 
 function checkEqual() {
